@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+  color: #2c3e50;
+  background-color: #fcfcfc;
+}
+
+body {
+  line-height: 1.7;
+}
+
+/* ================= 核心兩欄佈局 ================= */
+.main-container {
+  display: flex; /* 使用 Flexbox 實現並排 */
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* 左側欄：精準佔 30% 寬度 */
+.sidebar {
+  width: 10%;
+  background-color: #1a252f; /* 深色沉穩質感 */
+  color: #ecf0f1;
+  padding: 40px;
+  border-right: 1px solid #11171d;
+}
+
+/* 讓左側欄內容在滾動時固定在螢幕上 */
+.sidebar-sticky {
+  position: sticky;
+  top: 40px;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 內容頂部，頁尾底部 */
+}
+
+/* 右側主內容區：精準佔 70% 寬度 */
+.content-area {
+  width: 90%;
+  padding: 60px 10%;
+  background-color: ;
+}
+
+/* ================= 左側元件樣式 ================= */
+.profile-box {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.mypic {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover; /* Prevents the URL image from stretching */
+  border-radius: 50%; /* Makes the shape circular */
+}
+.name {
+  color: white;
+}
+.little1 {
+  margin-top: 30px;
+}
+.campingphoto {
+  height: 600px;
+}
+a {
+  text-decoration: none;
+}
+
+.avatar-placeholder {
+  width: 100px;
+  height: 100px;
+  background-color: #34495e;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bdc3c7;
+  font-size: 14px;
+}
+
+.profile-box h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.profile-box .subtitle {
+  font-size: 14px;
+  color: #3498db;
+}
+
+.side-nav ul {
+  list-style: none;
+}
+
+.side-nav li {
+  margin-bottom: 15px;
+}
+
+.side-nav a {
+  text-decoration: none;
+  color: #95a5a6;
+  font-size: 16px;
+  display: block;
+  padding: 8px 0;
+  transition: color 0.3s;
+}
+
+.side-nav a:hover,
+.side-nav a.active {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.side-footer {
+  font-size: 12px;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+/* ================= 右側元件樣式 ================= */
+.section {
+  padding: 40px 0 60px;
+}
+
+.border-top {
+  border-top: 1px solid #eee;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #1a252f;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #1a252f;
+}
+
+.lead {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.GAPSK {
+  width: 200px;
+  height: px;
+  size: cover;
+}
+.MOS {
+  height: 200px;
+  size: cover;
+}
+.A1 {
+  height: 200px;
+  size: cover;
+}
+.A2 {
+  width: 200px;
+  size: cover;
+}
+.FISO {
+  height: 200px;
+  size: cover;
+}
+.NCTE {
+  width: 200px;
+  size: cover;
+}
+.UMcamp {
+  width: 200px;
+  size: cover;
+}
+
+.skill-item {
+  background-color: #f8f9fa;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+}
+
+/* 作品卡片 */
+.card-grid {
+  display: flex;
+  flex-direction: ;
+  gap: 20px;
+}
+
+.card {
+  background: #fdfdfd;
+  border: 1px solid #eef2f5;
+  padding: 25px;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.activities {
+  margin-top: 50px;
+}
+
+/*聯絡
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #3498db;
+}
+
+.btn {
+  align-self: flex-start;
+  padding: 12px 28px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+} */
+
+/* ================= RWD 手機版自適應優化 ================= */
+@media (max-width: 992px) {
+  .main-container {
+    flex-direction: column; /* 寬度不夠時，從並排變成上下堆疊 */
+  }
+  .sidebar {
+    width: 100%; /* 手機上滿版 */
+    padding: 30px 20px;
+  }
+  .sidebar-sticky {
+    height: auto;
+    position: static;
+  }
+  .side-nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0 0;
+  }
+  .side-nav li {
+    margin-bottom: 0;
+  }
+  .content-area {
+    width: 100%; /* 手機上滿版 */
+    padding: 40px 20px;
+  }
+  .side-footer {
+    display: none; /* 手機版隱藏左側頁尾，保持畫面乾淨 */
+  }
+}
